@@ -41,6 +41,7 @@ if(isset($_POST['order'])){
       $delete_cart->execute([$user_id]);
 
       $message[] = 'order placed successfully!';
+      header('Location: thank_you.php');
    }else{
       $message[] = 'your cart is empty';
    }
