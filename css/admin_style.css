@@ -377,7 +377,18 @@ section{
 
 .show-products .box-container .box .details{
    font-size: 1.5rem;
+   color:var(--black);
+   line-height: 2;
+}
+.show-products .box-container .box .details_points{
+   font-size: 1.5rem;
    color:var(--light-color);
+   line-height: 2;
+}
+.show-products .box-container .box .link{
+   font-size: 1.5rem;
+   
+   color:var(--main-color);
    line-height: 2;
 }
 
