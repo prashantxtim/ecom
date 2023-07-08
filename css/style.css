@@ -121,6 +121,19 @@ section{
    color:var(--white);
 }
 
+.btn2{
+   display: block;
+   background-color: var(--main-color);
+   width: 20rem;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   padding:1rem 3rem;
+   font-size: 1.7rem;
+   text-transform: capitalize;
+   color:var(--white);
+   cursor: pointer;
+   text-align: center;
+}
 
 .btn,
 .delete-btn,
@@ -154,6 +167,11 @@ section{
 .delete-btn{
    background-color: var(--red);
 }
+
+.quick-view .form .content .desc .btn1{
+   background-color: #000000;
+}
+
 
 .flex-btn{
    display: flex;
@@ -628,6 +646,22 @@ section{
 }
 
 .quick-view form .row{
+   /* background-color: #49009b; */
+   display: flex;
+   margin-top: 1rem;
+   align-items: center;
+   gap:1.5rem;
+   flex-wrap: wrap;
+}
+.quick-view form .row2{
+   /* background-color: #ae68ff; */
+   display: flex;
+   align-items: center;
+   gap:1.5rem;
+   flex-wrap: wrap;
+}
+.quick-view form .row{
+   /* background-color: #ae68ff; */
    display: flex;
    align-items: center;
    gap:1.5rem;
@@ -636,7 +670,7 @@ section{
 
 .quick-view form .row .image-container{
    margin-bottom: 2rem;
-   flex:1 1 40rem;
+   flex:1 1 70rem;
 }
 
 .quick-view form .row .image-container .main-image img{
@@ -666,6 +700,10 @@ section{
    transform: scale(1.1);
 }
 
+/* .quick-view form .flex .image-container .content .name{
+   font-size: 50rem;
+} */
+
 .quick-view form img{
    width: 100%;
    height: 20rem;
@@ -674,13 +712,25 @@ section{
 }
 
 .quick-view form .row .content{
-   flex:1 1 40rem;
+   flex:1 1 20rem;
 }
 
 .quick-view form .row .content .name{
+   margin-top: 3rem;
    font-size: 2rem;
    color:var(--black);
 }
+.quick-view form .row .content .details{
+   margin-top: 1.5rem;
+   font-size: 2rem;
+   color:var(--black);
+}
+.quick-view form .row .content .details_points{
+   margin-top: 1.5rem;
+   font-size: 2rem;
+   color:#4b4b4b
+}
+
 
 .quick-view form .row .flex{
    display: flex;
@@ -704,10 +754,16 @@ section{
    color:var(--red);
 }
 
-.quick-view form .row .content .details{
-   font-size: 1.6rem;
-   color:var(--light-color);
-   line-height: 2;
+.quick-view form .row .content .name{
+   font-size: 4rem;
+   color:var(--black);
+   font-weight: 700;
+
+}  
+.quick-view form .row .content .description{
+   font-size: 3rem;
+   color:var(--black);
+   font-weight: 600;
 }  
 
 .products .box-container{

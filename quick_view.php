@@ -36,6 +36,7 @@ include 'components/wishlist_cart.php';
    <h3>Product Details</h3>
    <p><a href="home.php">Home</a> <span> > Product Details</span></p>
 </div>
+
 <section class="quick-view">
 
    <h1 class="heading">quick view</h1>
@@ -64,21 +65,45 @@ include 'components/wishlist_cart.php';
                <img src="uploaded_img/<?= $fetch_product['image_02']; ?>" alt="">
                <img src="uploaded_img/<?= $fetch_product['image_03']; ?>" alt="">
             </div>
+            
          </div>
          <div class="content">
-            <div class="name"><?= $fetch_product['name']; ?></div>
+            <div class="flex">
+               <div class="name"><?= $fetch_product['name']; ?></div>
+            </div>
+            <div class="flex">
+               <div class="description"><?= $fetch_product['description']; ?></div>
+            </div>
+            
             <div class="flex">
                <div class="price"><span>$</span><?= $fetch_product['price']; ?><span>/-</span></div>
-               <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
+               <input type="number" name="qty" class="qty" min="1" max="1" onkeypress="if(this.value.length == 2) return false;" value="1">
             </div>
-            <div class="details"><?= $fetch_product['details']; ?></div>
             <div class="flex-btn">
                <input type="submit" value="add to cart" class="btn" name="add_to_cart">
-               <input class="option-btn" type="submit" name="add_to_wishlist" value="add to wishlist">
             </div>
+            <div class="flex-btn">
+               <input class="option-btn" type="submit" name="add_to_wishlist" value="add to wishlist">
+         </div>
+
+      </div>
+
+      <div class="row3">
+         <dev class = "content">
+            <a href="#" class="btn2">Descriptions</a>
+         </dev>
+         <div class="content">
+            <!-- <a href="#" class="btn2">Descriptions</a> -->
+            <div class="name">Product Details</div>
+            <div class="details"><?= $fetch_product['details']; ?></div>
+            <div class="details_points"><?= $fetch_product['details_points']; ?></div>
          </div>
       </div>
+
+      
    </form>
+
+
    <?php
       }
    }else{
