@@ -53,7 +53,8 @@ CREATE TABLE `cart` (
   `name` varchar(100) NOT NULL,
   `price` int(10) NOT NULL,
   `quantity` int(10) NOT NULL,
-  `image` varchar(100) NOT NULL
+  `image` varchar(100) NOT NULL,
+  `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -87,6 +88,7 @@ CREATE TABLE `orders` (
   `address` varchar(500) NOT NULL,
   `total_products` varchar(1000) NOT NULL,
   `total_price` int(100) NOT NULL,
+  `link` varchar(255) NOT NULL,
   `placed_on` date NOT NULL DEFAULT current_timestamp(),
   `payment_status` varchar(20) NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -115,8 +117,8 @@ CREATE TABLE `products` (
   `image_01` varchar(100) NOT NULL,
   `image_02` varchar(100) NOT NULL,
   `image_03` varchar(100) NOT NULL,
-  `details_points` text, -- Additional field for bullet point details
-  `link` varchar(255) -- Additional field for a link
+  `details_points` text,
+  `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -144,7 +146,8 @@ CREATE TABLE `wishlist` (
   `pid` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `price` int(100) NOT NULL,
-  `image` varchar(100) NOT NULL
+  `image` varchar(100) NOT NULL,
+  `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -240,12 +243,18 @@ ALTER TABLE `wishlist`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
-ALTER TABLE `orders`
-ADD COLUMN `product_link` varchar(255) AFTER `total_price`;
+-- ALTER TABLE `orders`
+-- ADD COLUMN `product_link` varchar(255) AFTER `total_price`;
 
 
-ALTER TABLE `cart`
-ADD COLUMN `link` varchar(255) AFTER `image`;
+-- ALTER TABLE `cart`
+-- ADD COLUMN `link` varchar(255) AFTER `image`;
+-- ALTER TABLE `cart`
+-- ADD COLUMN `description` varchar(255) BEFORE `image`;
+
+
+-- ALTER TABLE `wishlist`
+-- ADD COLUMN `link` varchar(255) AFTER `image`;
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

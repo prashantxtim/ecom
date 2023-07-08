@@ -1,6 +1,6 @@
 <?php
 
-$db_name = 'mysql:host=localhost;dbname=ecommerce_db';
+$db_name = 'mysql:host=localhost;dbname=digi_db';
 $user_name = 'root';
 $user_password = '';
 
