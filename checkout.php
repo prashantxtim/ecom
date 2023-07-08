@@ -25,14 +25,17 @@ if(isset($_POST['order'])){
    $address = filter_var($address, FILTER_SANITIZE_STRING);
    $total_products = $_POST['total_products'];
    $total_price = $_POST['total_price'];
+   $link = $_POST['link'];
+
 
    $check_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
    $check_cart->execute([$user_id]);
 
    if($check_cart->rowCount() > 0){
 
-      $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price) VALUES(?,?,?,?,?,?,?,?)");
-      $insert_order->execute([$user_id, $name, $number, $email, $method, $address, $total_products, $total_price]);
+      $insert_order = $conn->prepare("INSERT INTO `orders` (user_id, name, number, email, method, address, total_products, total_price, link) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+      $insert_order->execute([$user_id, $name, $number, $email, $method, $address, $total_products, $total_price, $link]);
+
 
       $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
       $delete_cart->execute([$user_id]);
@@ -84,6 +87,8 @@ if(isset($_POST['order'])){
             while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){
                $cart_items[] = $fetch_cart['name'].' ('.$fetch_cart['price'].' x '. $fetch_cart['quantity'].') - ';
                $total_products = implode($cart_items);
+               $all_links[] = $fetch_cart['link'].', ';
+               $link = implode($all_links);
                $grand_total += ($fetch_cart['price'] * $fetch_cart['quantity']);
       ?>
          <p> <?= $fetch_cart['name']; ?> <span>(<?= '$'.$fetch_cart['price'].'/- x '. $fetch_cart['quantity']; ?>)</span> </p>
@@ -95,6 +100,7 @@ if(isset($_POST['order'])){
       ?>
          <input type="hidden" name="total_products" value="<?= $total_products; ?>">
          <input type="hidden" name="total_price" value="<?= $grand_total; ?>" value="">
+         <input type="hidden" name="link" value="<?= $link; ?>" value="">         
          <div class="grand-total">grand total : <span>$<?= $grand_total; ?>/-</span></div>
       </div>
 
