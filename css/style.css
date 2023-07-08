@@ -674,7 +674,7 @@ section{
 }
 
 .quick-view form .row .image-container .main-image img{
-   height: 30rem;
+   height: 50rem;
    width: 100%;
    object-fit: contain;
 }

@@ -39,7 +39,7 @@ if(isset($_SESSION['user_id'])){
 <section class="form-container2">
 
    <form action="" method="post">
-      <h3>Thank You!<span>✅</span></h3>
+      <h3>Thank You!<span>✔️</span></h3>
       <h5>Once Your payment is done, you will reveive the the project link in you order page.</h5>
       <a href="shop.php" class="btn">Continue Browsing Products</a>
       <a href="contact.php" class="option-btn">Didn't get any email? Contact Us</a>
