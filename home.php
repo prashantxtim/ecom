@@ -46,9 +46,9 @@ include 'components/wishlist_cart.php';
       <div class="swiper-slide slide">
          <div class="content">
             <span>The Biggest Marketplace for</span>
-            <h3>Digital Prodicts</h3>
-            <p>Get the best deals on electronics, laptops, mobiles, watches, TVs, accessories, etc.</p>
-            <a href="shop.php" class="btn">All Items</a>
+            <h3>Digital Products</h3>
+            <p>Discover limitless possibilities at the biggest marketplace for digital products, where creativity meets convenience.</p>
+            <a href="shop.php" class="btn">All Products</a>
          </div>
          <div class="image">
             <img src="images/3.png" alt="">
@@ -62,7 +62,7 @@ include 'components/wishlist_cart.php';
 
 <section class="home-products">
 
-   <h1 class="heading">Featured products</h1>
+   <h1 class="heading">Featured Products</h1>
 
    <div class="swiper products-slider">
 
@@ -85,8 +85,8 @@ include 'components/wishlist_cart.php';
       <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
       <div class="name"><?= $fetch_product['name']; ?></div>
       <div class="flex">
-         <div class="price"><span>$</span><?= $fetch_product['price']; ?><span>/-</span></div>
-         <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
+         <div class="price"><span>Nrs. </span><?= $fetch_product['price']; ?><span>/-</span></div>
+         <input type="number" name="qty" class="qty" min="1" max="1" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
       <input type="submit" value="add to cart" class="btn" name="add_to_cart">
    </form>
@@ -113,29 +113,31 @@ include 'components/wishlist_cart.php';
     <h1>Digi Presets Features</h1>
   </div>
   <div class="about-description">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, ea iste perspiciatis eos cum vero sint deleniti incidunt ut repellendus quibusdam, vel nobis quos error nostrum officiis, aperiam id facere.</p>
+    <p>Explore our platform, which offers premium digital assets for your creative endeavors.
+</p>
   </div>
   <div class="box-container">
     <div class="box">
       <div class="circle">
         <img src="images/1.png" alt="Image">
       </div>
-      <h2>Quality Platform</h2>
-      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, placeat, laborum architecto sequi repellat quaerat temporibus corrupti nihil laudantium quia quasi rerum ratione, suscipit nemo esse necessitatibus? Beatae, eos aliquid.</span>
+      <h2>Premium Assets</h2>
+      <span>Unleash your creativity with premium digital assets - photos, illustrations, videos, and music that inspire excellence.</span>
     </div>
     <div class="box">
       <div class="circle">
         <img src="images/2.png" alt="Image">
       </div>
-      <h2>Premium User</h2>
-      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, placeat, laborum architecto sequi repellat quaerat temporibus corrupti nihil laudantium quia quasi rerum ratione, suscipit nemo esse necessitatibus? Beatae, eos aliquid.</span>
+      <h2>Personal Account</h2>
+      <span>Manage all your downloads, organize your favorite assets, and enjoy all the personal account features.</span>
+</span>
     </div>
     <div class="box">
       <div class="circle">
         <img src="images/33.png" alt="Image">
       </div>
       <h2>Cloud Upload</h2>
-      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, placeat, laborum architecto sequi repellat quaerat temporibus corrupti nihil laudantium quia quasi rerum ratione, suscipit nemo esse necessitatibus? Beatae, eos aliquid.</span>
+      <span>Securely store and access your digital files anytime, anywhere with our reliable cloud storage solution.</span>
     </div>
   </div>
 </section>

@@ -60,7 +60,7 @@
          <?php
             }else{
          ?>
-         <p>please login or register first!</p>
+         <p>Please login or register first!</p>
          <div class="flex-btn">
             <a href="user_register.php" class="option-btn">register</a>
             <a href="user_login.php" class="option-btn">login</a>

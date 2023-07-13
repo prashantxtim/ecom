@@ -22,7 +22,7 @@ if (isset($_POST['order'])) {
    $email = filter_var($email, FILTER_SANITIZE_STRING);
    $method = $_POST['method'];
    $method = filter_var($method, FILTER_SANITIZE_STRING);
-   $address = ''; // Empty address string
+   $address = ''; 
    $total_products = $_POST['total_products'];
    $total_price = $_POST['total_price'];
    $link = $_POST['link'];
@@ -99,7 +99,7 @@ if (isset($_POST['order'])) {
                   $link = implode($all_links);
                   $grand_total += ($fetch_cart['price'] * $fetch_cart['quantity']);
             ?>
-                  <p><?= $fetch_cart['name'] ?> <span>(<?= '$' . $fetch_cart['price'] . '/- x ' . $fetch_cart['quantity'] ?>)</span></p>
+                  <p><?= $fetch_cart['name'] ?> <span>(<?= 'Nrs. ' . $fetch_cart['price'] . '/- x ' . $fetch_cart['quantity'] ?>)</span></p>
             <?php
                }
             } else {
@@ -109,7 +109,7 @@ if (isset($_POST['order'])) {
             <input type="hidden" name="total_products" value="<?= $total_products ?>">
             <input type="hidden" name="total_price" value="<?= $grand_total ?>">
             <input type="hidden" name="link" value="<?= $link ?>">
-            <div class="grand-total">Grand Total: <span>$<?= $grand_total ?>/-</span></div>
+            <div class="grand-total">Grand Total: <span>Nrs. <?= $grand_total ?>/-</span></div>
          </div>
 
          <h3>Place Your Orders</h3>
@@ -130,10 +130,9 @@ if (isset($_POST['order'])) {
             <div class="inputBox">
                <span>Payment Method:</span>
                <select name="method" class="box" required>
-                  <option value="cash on delivery">Cash on Delivery</option>
-                  <option value="credit card">Credit Card</option>
-                  <option value="paytm">Paytm</option>
-                  <option value="paypal">PayPal</option>
+                  <option value="IME Pay">IME Pay: 9840358372</option>
+                  <option value="Khalti">Khalti: 9840358372</option>
+                  <option value="Esewa">Esewa: 9840358372</option>
                </select>
             </div>
          </div>

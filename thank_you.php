@@ -40,9 +40,9 @@ if(isset($_SESSION['user_id'])){
 
    <form action="" method="post">
       <h3>Thank You!<span>✔️</span></h3>
-      <h5>Once Your payment is done, you will reveive the the project link in you order page.</h5>
+      <h5>Your purchase is completed. Now, please send us the receipt or the screenshot of the paymant to our email: prashantxtim@gmail.com</h5>
       <a href="shop.php" class="btn">Continue Browsing Products</a>
-      <a href="contact.php" class="option-btn">Didn't get any email? Contact Us</a>
+      <a href="contact.php" class="option-btn">Contact Us</a>
    </form>
 
 </section>

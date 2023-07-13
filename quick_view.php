@@ -39,8 +39,6 @@ include 'components/wishlist_cart.php';
 
 <section class="quick-view">
 
-   <h1 class="heading">quick view</h1>
-
    <?php
      $pid = $_GET['pid'];
      $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?"); 
@@ -76,12 +74,13 @@ include 'components/wishlist_cart.php';
             </div>
             
             <div class="flex">
-               <div class="price"><span>$</span><?= $fetch_product['price']; ?><span>/-</span></div>
+               <div class="price"><span>Nrs. </span><?= $fetch_product['price']; ?><span>/-</span></div>
                <input type="number" name="qty" class="qty" min="1" max="1" onkeypress="if(this.value.length == 2) return false;" value="1">
             </div>
             <div class="flex-btn">
                <input type="submit" value="add to cart" class="btn" name="add_to_cart">
             </div>
+            <br>
             <div class="flex-btn">
                <input class="option-btn" type="submit" name="add_to_wishlist" value="add to wishlist">
          </div>

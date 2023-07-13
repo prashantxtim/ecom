@@ -57,9 +57,9 @@ if(isset($_GET['delete'])){
          while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){   
    ?>
    <div class="box">
-      <p> user id : <span><?= $fetch_accounts['id']; ?></span> </p>
-      <p> username : <span><?= $fetch_accounts['name']; ?></span> </p>
-      <p> email : <span><?= $fetch_accounts['email']; ?></span> </p>
+      <p> User ID : <span><?= $fetch_accounts['id']; ?></span> </p>
+      <p> Username : <span><?= $fetch_accounts['name']; ?></span> </p>
+      <p> Email : <span><?= $fetch_accounts['email']; ?></span> </p>
       <a href="users_accounts.php?delete=<?= $fetch_accounts['id']; ?>" onclick="return confirm('delete this account? the user related information will also be delete!')" class="delete-btn">delete</a>
    </div>
    <?php
