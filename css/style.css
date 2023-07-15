@@ -52,6 +52,8 @@ section{
    padding:2rem;
    max-width: 1200px;
    margin:0 auto;
+   /* margin-top: 2.5rem; */
+   /* margin-bottom: 2.5rem; */
 }
 
 .heading{
@@ -741,7 +743,6 @@ section{
    font-size: 2rem;
    color:var(--black);
    margin-bottom: 3rem;
-
 }
 .quick-view form .row .content .details{
    margin-top: 1.5rem;
@@ -785,10 +786,8 @@ section{
    font-size: 4rem;
    color:var(--black);
    font-weight: 600;
-   line-height: 2.3rem;
+   line-height: 5rem;
 }  
-
-
 
 
 .quick-view form .row .content .description{

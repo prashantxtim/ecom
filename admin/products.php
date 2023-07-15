@@ -121,8 +121,8 @@ if (isset($_GET['delete'])) {
             <input type="number" min="0" class="box" required max="9999999999" placeholder="Enter product price" onkeypress="if(this.value.length == 10) return false;" name="price">
          </div>
          <div class="inputBox">
-            <span>Product Description (required)</span>
-            <textarea name="description" placeholder="Enter product description" class="box" required maxlength="500" cols="30" rows="10"></textarea>
+            <span>Product Category (required)</span>
+            <textarea name="description" placeholder="Enter product category" class="box" required maxlength="500" cols="30" rows="10"></textarea>
          </div>
          <div class="inputBox">
             <span>Image 01 (required)</span>
@@ -137,8 +137,8 @@ if (isset($_GET['delete'])) {
             <input type="file" name="image_03" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
          </div>
          <div class="inputBox">
-            <span>Product Details (required)</span>
-            <textarea name="details" placeholder="Enter product details" class="box" required maxlength="500" cols="30" rows="10"></textarea>
+            <span>Product Description (required)</span>
+            <textarea name="details" placeholder="Enter product description" class="box" required maxlength="500" cols="30" rows="10"></textarea>
          </div>
          <div class="inputBox">
             <span>ProductDetails Points (optional)</span>

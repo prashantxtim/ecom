@@ -38,11 +38,11 @@ if(isset($_SESSION['user_id'])){
    <div class="row">
 
       <div class="image">
-         <img src="images/about-img.svg" alt="">
+         <img src="images/about_us.svg" height = "300" width = "350" padding = "10"/>
       </div>
 
       <div class="content">
-         <h3>Why Choose Us?</h3>
+         <h3>About Us</h3>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam veritatis minus et similique doloribus? Harum molestias tenetur eaque illum quas? Obcaecati nulla in itaque modi magnam ipsa molestiae ullam consequuntur.</p>
          <a href="contact.php" class="btn">contact us</a>
       </div>
@@ -50,29 +50,6 @@ if(isset($_SESSION['user_id'])){
    </div>
 
 </section>
-
-<section class="about2">
-
-   <div class="row">
-
-      <div class="content">
-         <h3>why choose us?</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam veritatis minus et similique doloribus? Harum molestias tenetur eaque illum quas? Obcaecati nulla in itaque modi magnam ipsa molestiae ullam consequuntur.</p>
-         <a href="contact.php" class="btn">contact us</a>
-      </div>
-
-      <div class="image">
-         <img src="images/about-img.svg" alt="">
-      </div>
-
-      
-
-   </div>
-
-</section>
-
-
-
 
 
 <?php include 'components/footer.php'; ?>

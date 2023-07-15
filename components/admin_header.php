@@ -16,7 +16,7 @@
    <section class="flex">
 
       <div class="logo">
-         <a href="dashboard.php"><img src="images/adminlogo.png" alt="img"></a>
+         <a href="dashboard.php">Digi Admin</a>
       </div>
 
       <nav class="navbar">
